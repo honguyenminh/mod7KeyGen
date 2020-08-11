@@ -1,0 +1,44 @@
+# Additional folders made by IDE
+ipch/
+Debug/
+Release/
+MOD7KeyGen/Debug/
+MOD7KeyGen/Release/
+
+# User file made by IDE
+*.suo
+*.sdf
+MOD7KeyGen/ReadMe.txt
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
