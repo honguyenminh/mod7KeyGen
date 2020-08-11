@@ -171,8 +171,9 @@ int main(int argc, char *argv[])
 									key == "999"
 									);
 								//Last 7 digits
-								int tempSum = 0; string lastPart;
+								int tempSum; string lastPart;
 								do {
+									tempSum = 0;
 									lastPart = "";
 									int temp;
 									for (int i = 0; i < 7; i++) {
@@ -180,7 +181,7 @@ int main(int argc, char *argv[])
 										tempSum += temp;
 										lastPart.append(to_string(temp));
 									}
-								} while (tempSum % 7 == 0 && lastPart[6] != 0 && lastPart[6] < 8);
+								} while (tempSum % 7 != 0 || lastPart[6] - '0' == 0 || lastPart[6] - '0' >= 8);
 								key.append("-" + lastPart);
 								cout << key << endl; // Output
 								key = "";			// Reset key for next loop
@@ -198,8 +199,9 @@ int main(int argc, char *argv[])
 								else { key.append(to_string((key[2] - '0') + 1)); }
 
 								// Last 7 digits, same with 10digit key
-								int tempSum = 0; string lastPart;
+								int tempSum; string lastPart;
 								do {
+									tempSum = 0;
 									lastPart = "";
 									int temp;
 									for (int i = 0; i < 7; i++) {
@@ -207,7 +209,7 @@ int main(int argc, char *argv[])
 										tempSum += temp;
 										lastPart.append(to_string(temp));
 									}
-								} while (tempSum % 7 == 0 && lastPart[6] != 0 && lastPart[6] < 8);
+								} while (tempSum % 7 != 0 || lastPart[6] - '0' == 0 || lastPart[6] - '0' >= 8);
 								key.append("-" + lastPart);
 								cout << key << endl; // Output
 								key = "";			// Reset key for next loop
@@ -234,14 +236,13 @@ int main(int argc, char *argv[])
 
 								key.append(yearArr[temp]);
 
-
 								// Second is OEM
 								key.append("-OEM-0"); //Append 0, explained later
 
-
 								// Third seven-digit segment, same with above but first digit here must be 0, which is already appended
-								int tempSum = 0; string lastPart;
+								int tempSum; string lastPart;
 								do {
+									tempSum = 0;
 									lastPart = "";
 									int temp;
 									for (int i = 0; i < 6; i++) {
@@ -249,9 +250,8 @@ int main(int argc, char *argv[])
 										tempSum += temp;
 										lastPart.append(to_string(temp));
 									}
-								} while (tempSum % 7 == 0 && lastPart[5] != 0 && lastPart[5] < 8);
+								} while (tempSum % 7 != 0 || lastPart[5] - '0' == 0 || lastPart[5] - '0' >= 8);
 								key.append(lastPart + "-");
-
 
 								// Last five-digit segment can be anything, so randomly created
 								for (int i = 0; i < 5; i++) {
