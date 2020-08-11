@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 				// Help command
 				if (argList[0] == "-h" || argList[0] == "--help") {
 					cout << "A basic product key generator for Microsoft products that use mod7 algorithm." << endl << endl;
-					cout << "Syntax: {argument}(required)   {number of key}(optional)" << endl << endl;
+					cout << "Syntax:    {argument}(required)   {number of key(s)}(optional)" << endl << endl;
 					cout << "Usage: {argument} is required to set key type, list below." << endl;
 					cout << "Generate 1 key with the specified key type set by {argument}." << endl;
 					cout << "Number of key(s) generated can be modified with the {number of key} option." << endl;
@@ -64,6 +64,7 @@ int main(int argc, char *argv[])
 					cout << "                -11  --11digitCD     Set key type as 11-digit for CD retails." << endl;
 					cout << "                                      - This type can be found in Office 97,..." << endl;
 					cout << "                -20  --20digitOEM    Set key type as 20-digit for OEM versions." << endl << endl;
+					cout << "Example command: MOD7KeyGen.exe -11        MOD7KeyGen.exe -20 5" << endl << endl;
 					cout << "                                     THIS KEYGEN HAS SUPER COW POWER.\n";
 				}
 
